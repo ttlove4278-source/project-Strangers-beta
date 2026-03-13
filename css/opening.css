@@ -1,0 +1,22 @@
+#scene-opening{display:flex;flex-direction:column;align-items:center;justify-content:center;background:#000;overflow:hidden}
+.op-static{position:absolute;top:0;left:0;width:100%;height:100%;opacity:0;transition:opacity 0.3s}
+.op-static.active{opacity:1;background:repeating-conic-gradient(rgba(255,255,255,0.02) 0%,transparent 0.5%,transparent 1%);animation:op-noise 0.1s steps(2) infinite}
+@keyframes op-noise{to{background-position:100px 50px}}
+.op-date{position:absolute;font-family:var(--font-mono);font-size:13px;color:var(--text-muted);letter-spacing:6px;opacity:0}
+.op-heat-line{position:absolute;bottom:50%;left:0;width:100%;height:1px;background:var(--accent-heat);transform:scaleX(0);transform-origin:left}
+.op-quote{position:absolute;font-family:var(--font-serif);font-size:18px;font-weight:300;color:var(--text-primary);letter-spacing:6px;opacity:0;text-align:center;line-height:2.4;writing-mode:vertical-rl}
+.op-silhouette{position:absolute;opacity:0;display:flex;flex-direction:column;align-items:center}
+.op-sil-body{width:60px;height:180px;position:relative}
+.op-sil-head{width:24px;height:24px;border-radius:50%;background:currentColor;margin:0 auto 4px}
+.op-sil-torso{width:32px;height:60px;margin:0 auto;background:currentColor;clip-path:polygon(20% 0%,80% 0%,95% 100%,5% 100%)}
+.op-sil-legs{width:40px;height:70px;margin:0 auto;display:flex;gap:4px}
+.op-sil-leg{flex:1;background:currentColor;clip-path:polygon(20% 0%,80% 0%,70% 100%,30% 100%)}
+.op-sil-name{font-family:var(--font-serif);font-size:11px;letter-spacing:4px;margin-top:10px;color:currentColor}
+.op-sil-sig{font-family:var(--font-mono);font-size:8px;font-style:italic;letter-spacing:2px;color:var(--accent-crystal);margin-top:4px;opacity:0.6}
+.op-title-wrap{position:absolute;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:12px;opacity:0}
+.op-title-main{font-family:var(--font-serif);font-weight:900;font-size:56px;letter-spacing:14px;color:var(--text-primary);text-shadow:0 0 60px rgba(232,93,58,0.25)}
+.op-title-main span{display:inline-block;opacity:0;transform:translateY(20px)}
+.op-title-sub{font-family:var(--font-mono);font-size:9px;letter-spacing:6px;color:var(--text-muted);opacity:0}
+.op-title-line{width:0;height:1px;background:var(--accent-heat);transition:width 1s var(--ease-expo)}
+.op-press{position:absolute;bottom:50px;font-family:var(--font-mono);font-size:10px;letter-spacing:4px;color:var(--text-muted);opacity:0}
+.op-press.visible{opacity:1;animation:pulse-glow 2s ease-in-out infinite}
