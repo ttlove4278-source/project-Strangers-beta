@@ -1,0 +1,36 @@
+:root {
+  --bg-primary: #0A0A0C;
+  --bg-secondary: #111114;
+  --bg-tertiary: #1A1A1F;
+  --text-primary: #F0EDE4;
+  --text-secondary: #B0ADA4;
+  --text-muted: #6A675E;
+  --accent-heat: #E85D3A;
+  --accent-abyss: #1A1A3E;
+  --accent-pocari: #4A9BC7;
+  --accent-crystal: #7B5EA7;
+  --accent-gold: #D4AF37;
+  --char-haku: #C4A35A;
+  --char-hikaru: #8FB8A0;
+  --char-rei: #D4AF37;
+  --char-toya: #4A5568;
+  --char-912: #8B5E83;
+  --char-akira: #7A8B7A;
+  --char-makoto: #C4956A;
+  --font-serif: 'Noto Serif SC', serif;
+  --font-sans: 'Noto Sans SC', sans-serif;
+  --font-mono: 'JetBrains Mono', monospace;
+  --t-fast: 0.15s;
+  --t-normal: 0.3s;
+  --t-slow: 0.6s;
+  --t-dramatic: 1.2s;
+  --ease-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-expo: cubic-bezier(0.7, 0, 0.84, 0);
+  --ease-back: cubic-bezier(0.34, 1.56, 0.64, 1);
+  --z-bg: 1;
+  --z-scene: 10;
+  --z-hud: 50;
+  --z-transition: 90;
+  --z-overlay: 95;
+  --z-flash: 100;
+}
