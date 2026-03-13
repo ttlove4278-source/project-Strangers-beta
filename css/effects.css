@@ -1,0 +1,25 @@
+@keyframes glitch-anim{0%{transform:translate(0);filter:none}10%{transform:translate(-3px,2px);filter:hue-rotate(90deg)}20%{transform:translate(3px,-2px);filter:hue-rotate(-90deg)}30%{transform:translate(-2px,-1px);clip-path:inset(30% 0 40% 0)}40%{transform:translate(2px,1px);clip-path:inset(60% 0 10% 0)}50%{transform:translate(-1px,2px);filter:saturate(2)}60%{transform:translate(1px,-1px);clip-path:inset(10% 0 70% 0)}70%,100%{transform:translate(0);filter:none;clip-path:none}}
+.glitch{animation:glitch-anim 0.3s linear}
+@keyframes vhs-rewind{0%{filter:blur(0) saturate(1);transform:scaleX(1)}15%{filter:blur(2px) saturate(3) hue-rotate(30deg);transform:scaleX(1.02)}30%{filter:blur(4px) saturate(0.5) hue-rotate(-60deg);transform:scaleX(0.98)}50%{filter:blur(6px) saturate(2) hue-rotate(120deg);transform:scaleX(1.05)}70%{filter:blur(3px) saturate(1.5) hue-rotate(-30deg);transform:scaleX(0.99)}100%{filter:blur(0) saturate(1) hue-rotate(0);transform:scaleX(1)}}
+.vhs-rewind{animation:vhs-rewind 1.5s ease-out}
+@keyframes shake{0%,100%{transform:translate(0)}10%{transform:translate(-4px,2px)}20%{transform:translate(4px,-3px)}30%{transform:translate(-3px,1px)}40%{transform:translate(2px,-2px)}50%{transform:translate(-2px,3px)}60%{transform:translate(3px,-1px)}70%{transform:translate(-1px,2px)}80%{transform:translate(1px,-1px)}90%{transform:translate(-1px,0)}}
+.screen-shake{animation:shake 0.5s ease-out}
+@keyframes color-inv{0%,100%{filter:invert(0)}50%{filter:invert(1)}}
+.color-invert{animation:color-inv 0.15s linear}
+@keyframes dissolve{0%{opacity:1;filter:blur(0);letter-spacing:0}50%{opacity:0.6;filter:blur(1px);letter-spacing:4px}100%{opacity:0;filter:blur(8px);letter-spacing:20px}}
+.text-dissolve{animation:dissolve 2s ease-in forwards}
+@keyframes float-up{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+.float-up{animation:float-up 3s ease-out infinite}
+@keyframes pulse-glow{0%,100%{text-shadow:0 0 4px currentColor}50%{text-shadow:0 0 16px currentColor,0 0 32px currentColor}}
+.pulse-glow{animation:pulse-glow 2s ease-in-out infinite}
+.typing-cursor::after{content:'│';animation:blink 0.8s step-end infinite;color:var(--text-primary)}
+@keyframes blink{0%,100%{opacity:1}50%{opacity:0}}
+@keyframes fade-in{from{opacity:0}to{opacity:1}}
+.fade-in{animation:fade-in 0.6s ease-out forwards}
+@keyframes fade-out{from{opacity:1}to{opacity:0}}
+.fade-out{animation:fade-out 0.6s ease-in forwards}
+@keyframes slide-up{from{transform:translateY(30px);opacity:0}to{transform:translateY(0);opacity:1}}
+.slide-up{animation:slide-up 0.6s var(--ease-expo) forwards}
+@keyframes slide-right{from{transform:translateX(-40px);opacity:0}to{transform:translateX(0);opacity:1}}
+.slide-right{animation:slide-right 0.8s var(--ease-expo) forwards}
+@keyframes noise-shift{0%{transform:translate(0)}33%{transform:translate(-5px,5px)}66%{transform:translate(5px,-5px)}}
