@@ -1,0 +1,6 @@
+@keyframes t-fade{0%{opacity:0}30%{opacity:1}70%{opacity:1}100%{opacity:0}}
+.transition-fade{animation:t-fade 1.2s ease-in-out}
+@keyframes t-vhs{0%{opacity:0}10%{opacity:1;filter:blur(4px) hue-rotate(90deg)}20%{filter:blur(0);clip-path:inset(20% 0 40% 0)}35%{clip-path:inset(0);filter:saturate(2)}50%{opacity:1;filter:saturate(1)}65%{filter:blur(2px) hue-rotate(-45deg)}80%{clip-path:inset(50% 0 20% 0)}90%{clip-path:inset(0);filter:blur(0)}100%{opacity:0}}
+.transition-vhs{animation:t-vhs 2s ease-in-out}
+@keyframes t-page{0%{transform:perspective(1200px) rotateY(90deg);transform-origin:left center;opacity:0}100%{transform:perspective(1200px) rotateY(0deg);transform-origin:left center;opacity:1}}
+.transition-page{animation:t-page 1s var(--ease-expo)}
