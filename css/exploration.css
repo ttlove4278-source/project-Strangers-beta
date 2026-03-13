@@ -1,0 +1,36 @@
+#scene-exploration{display:flex;flex-direction:column;background:var(--bg-primary);overflow:hidden}
+.exp-bg{position:absolute;top:0;left:0;width:100%;height:100%}
+.exp-sky{position:absolute;top:0;left:0;width:100%;height:45%}
+.exp-sky.day{background:linear-gradient(to bottom,#2a3a5a 0%,#5a6a8a 40%,#9a8a6a 70%,#c49060 100%)}
+.exp-sky.evening{background:linear-gradient(to bottom,#1a1a3e 0%,#4a2a3e 30%,#8a3a3a 60%,#c44a2a 100%)}
+.exp-sky.night{background:linear-gradient(to bottom,#050510 0%,#0a0a1c 50%,#121228 100%)}
+.exp-ground{position:absolute;bottom:0;left:0;width:100%;height:55%}
+.exp-scene{position:absolute;top:0;left:0;width:100%;height:100%}
+.exp-elem{position:absolute;cursor:pointer;transition:all var(--t-normal)}
+.exp-elem:hover{filter:brightness(1.3)}
+.exp-elem.interact::after{content:'';position:absolute;top:-6px;left:50%;transform:translateX(-50%);width:5px;height:5px;border-radius:50%;background:var(--accent-pocari);animation:pulse-glow 2s ease-in-out infinite}
+.exp-loc-name{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);font-family:var(--font-serif);font-size:26px;font-weight:600;letter-spacing:12px;color:var(--text-primary);text-shadow:0 0 40px rgba(0,0,0,0.8);opacity:0;pointer-events:none}
+.exp-loc-name.show{animation:loc-name 3s ease-out forwards}
+@keyframes loc-name{0%{opacity:0;letter-spacing:20px}20%{opacity:1;letter-spacing:12px}75%{opacity:1}100%{opacity:0}}
+.exp-loc-sub{display:block;font-family:var(--font-mono);font-size:9px;letter-spacing:4px;margin-top:8px;color:var(--text-muted)}
+.exp-nav{position:absolute;bottom:18px;left:50%;transform:translateX(-50%);display:flex;gap:6px;pointer-events:auto}
+.exp-nav-btn{padding:9px 22px;font-family:var(--font-serif);font-size:11px;letter-spacing:3px;color:var(--text-secondary);border:1px solid rgba(240,237,228,0.08);background:rgba(10,10,12,0.7);cursor:pointer;transition:all var(--t-normal);pointer-events:auto}
+.exp-nav-btn:hover{color:var(--text-primary);border-color:var(--accent-heat);background:rgba(232,93,58,0.08)}
+.exp-actions{position:absolute;bottom:65px;right:28px;display:flex;flex-direction:column;gap:3px;opacity:0;pointer-events:none;transition:opacity var(--t-normal)}
+.exp-actions.active{opacity:1;pointer-events:auto}
+.exp-act-btn{padding:9px 26px;font-family:var(--font-serif);font-size:12px;letter-spacing:3px;color:var(--text-secondary);text-align:right;background:rgba(10,10,12,0.85);border:1px solid rgba(240,237,228,0.05);cursor:pointer;transition:all var(--t-normal) var(--ease-expo)}
+.exp-act-btn:hover{color:var(--text-primary);padding-right:38px;border-color:rgba(240,237,228,0.18)}
+.exp-vending{position:absolute;cursor:pointer}
+.exp-vending-body{width:40px;height:65px;background:linear-gradient(to bottom,#2a3a5a,#1a2a4a);border:1px solid rgba(255,255,255,0.08);border-radius:2px;box-shadow:0 0 16px rgba(74,155,199,0.25)}
+.exp-vending-glow{position:absolute;bottom:0;left:0;width:100%;height:6px;background:var(--accent-pocari);opacity:0.5;border-radius:0 0 2px 2px;animation:v-glow 3s ease-in-out infinite}
+@keyframes v-glow{0%,100%{opacity:0.3}50%{opacity:0.7}}
+.exp-map{position:absolute;top:0;left:0;width:100%;height:100%;background:rgba(10,10,12,0.93);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity var(--t-normal)}
+.exp-map.active{opacity:1;pointer-events:auto}
+.exp-map-inner{position:relative;width:560px;height:380px}
+.exp-map-node{position:absolute;padding:7px 14px;font-family:var(--font-serif);font-size:11px;letter-spacing:3px;color:var(--text-secondary);border:1px solid rgba(240,237,228,0.08);background:rgba(10,10,12,0.5);cursor:pointer;transition:all var(--t-normal)}
+.exp-map-node:hover{color:var(--text-primary);border-color:var(--accent-heat)}
+.exp-map-node.current{border-color:var(--accent-pocari);color:var(--accent-pocari)}
+.exp-map-node.locked{opacity:0.2;pointer-events:none}
+.exp-map-line{position:absolute;height:1px;background:rgba(240,237,228,0.06);transform-origin:left center}
+.exp-map-close{position:absolute;top:20px;right:20px;font-family:var(--font-mono);font-size:10px;color:var(--text-muted);cursor:pointer;letter-spacing:2px;padding:8px;transition:color 0.3s}
+.exp-map-close:hover{color:var(--text-primary)}
