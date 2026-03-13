@@ -1,0 +1,18 @@
+#scene-menu{display:flex;flex-direction:column;align-items:center;justify-content:center;background:var(--bg-primary);overflow:hidden}
+.menu-bg{position:absolute;top:0;left:0;width:100%;height:100%;overflow:hidden}
+.menu-bg-line{position:absolute;width:1px;height:100%;background:linear-gradient(to bottom,transparent,rgba(240,237,228,0.03) 20%,rgba(240,237,228,0.05) 50%,rgba(240,237,228,0.03) 80%,transparent)}
+.menu-title-area{position:absolute;top:14%;display:flex;flex-direction:column;align-items:center;gap:14px}
+.menu-title{font-family:var(--font-serif);font-weight:900;font-size:42px;letter-spacing:14px;color:var(--text-primary);text-shadow:0 0 60px rgba(232,93,58,0.15)}
+.menu-subtitle{font-family:var(--font-mono);font-size:9px;letter-spacing:5px;color:var(--text-muted)}
+.menu-line{width:60px;height:1px;background:var(--accent-heat);opacity:0.5}
+.menu-items{position:absolute;top:46%;display:flex;flex-direction:column;gap:0}
+.menu-item{position:relative;padding:18px 52px;font-family:var(--font-serif);font-size:15px;font-weight:400;letter-spacing:6px;color:var(--text-muted);transition:all var(--t-normal) var(--ease-expo);cursor:pointer;text-align:center;overflow:hidden}
+.menu-item::before{content:'';position:absolute;left:0;bottom:0;width:0;height:1px;background:var(--accent-heat);transition:width var(--t-normal) var(--ease-expo)}
+.menu-item:hover,.menu-item.sel{color:var(--text-primary);padding-left:68px}
+.menu-item:hover::before,.menu-item.sel::before{width:100%}
+.menu-item-dot{position:absolute;left:28px;top:50%;transform:translateY(-50%);width:4px;height:4px;background:var(--accent-heat);opacity:0;transition:opacity var(--t-fast)}
+.menu-item:hover .menu-item-dot,.menu-item.sel .menu-item-dot{opacity:1}
+.menu-item-en{display:block;font-family:var(--font-mono);font-size:8px;letter-spacing:3px;color:var(--text-muted);margin-top:3px;opacity:0;transition:opacity var(--t-normal)}
+.menu-item:hover .menu-item-en,.menu-item.sel .menu-item-en{opacity:0.5}
+.menu-footer{position:absolute;bottom:36px;display:flex;gap:28px;align-items:center;font-family:var(--font-mono);font-size:9px;color:var(--text-muted);letter-spacing:2px}
+.menu-temp{color:var(--accent-heat)}
